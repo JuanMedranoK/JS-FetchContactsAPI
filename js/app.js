@@ -10,7 +10,11 @@ function cargarContactos() {
             return response.json();
         })
         .then(function(response){
-            console.log(response);
-        });
-        
+        listaContactos.innerHTML = "";
+            response.forEach(function(contacto){
+                // console.log(contacto.nombre);
+                listaContactos.innerHTML += `
+       ${contacto.nombre} ${contacto.apellido} - ${contacto.telefono}<br>`;
+            })
+        })
 }
