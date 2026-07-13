@@ -45,6 +45,28 @@ button:hover{
     background:#0b5ed7;
 }
 
+/* Acciones */
+.acciones{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+}
+
+.acciones input{
+    flex:1;
+    min-width:220px;
+    padding:10px 12px;
+    border:1px solid #d0d7de;
+    border-radius:6px;
+    font-size:15px;
+}
+
+.acciones button{
+    margin-bottom:0;
+}
+
 /* Contenedor de los contactos */
 #resultado{
     display:flex;
