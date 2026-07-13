@@ -1,3 +1,4 @@
+/* Reset */
 *{
     margin:0;
     padding:0;
@@ -5,38 +6,77 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
+/* Fondo */
 body{
-    background:#f4f4f4;
+    background:#f3f5f7;
 }
 
+/* Contenedor principal */
 .container{
     width:80%;
     max-width:900px;
     margin:40px auto;
-    background:white;
-    padding:20px;
-    border-radius:8px;
+    background:#ffffff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
 }
 
+/* Título */
 h1{
     margin-bottom:20px;
+    color:#333;
 }
 
+/* Botón */
 button{
-    padding:10px 18px;
+    padding:12px 20px;
+    border:none;
+    border-radius:6px;
+    background:#0d6efd;
+    color:#fff;
+    font-size:15px;
     cursor:pointer;
+    transition:background .3s ease;
     margin-bottom:20px;
 }
 
+button:hover{
+    background:#0b5ed7;
+}
+
+/* Contenedor de los contactos */
 #resultado{
     display:flex;
     flex-direction:column;
-    gap:10px;
+    gap:15px;
 }
 
+/* Tarjeta de contacto */
 .card{
-    border:1px solid #ddd;
-    padding:15px;
-    border-radius:6px;
-    background:#fafafa;
+    background:#ffffff;
+    border-left:5px solid #0d6efd;
+    border-radius:8px;
+    padding:15px 20px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 4px 12px rgba(0,0,0,.12);
+}
+
+/* Nombre */
+.card h3{
+    color:#222;
+    margin-bottom:8px;
+    font-size:18px;
+}
+
+/* Información */
+.card p{
+    color:#555;
+    font-size:15px;
+    line-height:1.5;
 }

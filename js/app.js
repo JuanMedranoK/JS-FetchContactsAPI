@@ -11,7 +11,10 @@ async function cargarContactos() {
         listaContactos.innerHTML = "";
         data.forEach(function(contacto) {
             listaContactos.innerHTML += `
-       ${contacto.nombre} ${contacto.apellido} - ${contacto.telefono}<br>`;
+            <div class="card">
+                <h3>${contacto.nombre} ${contacto.apellido}</h3>
+                <p><strong>📞 Teléfono:</strong> ${contacto.telefono}</p>
+            </div>`;
         });
     } catch (error) {
         console.error(error);
