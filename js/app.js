@@ -3,18 +3,18 @@ const listaContactos = document.getElementById("resultado");
 
 boton.addEventListener("click", cargarContactos);
 
-function cargarContactos() {
+async function cargarContactos() {
+    try {
+        const response = await fetch('https://raydelto.org/agenda.php');
+        const data = await response.json();
 
-    fetch('https://raydelto.org/agenda.php')
-        .then(function(response){
-            return response.json();
-        })
-        .then(function(response){
         listaContactos.innerHTML = "";
-            response.forEach(function(contacto){
-                // console.log(contacto.nombre);
-                listaContactos.innerHTML += `
+        data.forEach(function(contacto) {
+            listaContactos.innerHTML += `
        ${contacto.nombre} ${contacto.apellido} - ${contacto.telefono}<br>`;
-            })
-        })
+        });
+    } catch (error) {
+        console.error(error);
+        listaContactos.innerHTML = "Error cargando los contactos.";
+    }
 }
